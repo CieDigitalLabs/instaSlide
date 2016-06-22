@@ -1,0 +1,24 @@
+{
+  "name": "instaslide",
+  "version": "1.0.0",
+  "description": "Create a slide instantly from any section of your website",
+  "main": "jquery.instaslide.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CieDigitalLabs/instaSlide.git"
+  },
+  "keywords": [
+    "slider",
+    "gallery",
+    "modal"
+  ],
+  "author": "Fernando Herrera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CieDigitalLabs/instaSlide/issues"
+  },
+  "homepage": "https://github.com/CieDigitalLabs/instaSlide#readme"
+}
