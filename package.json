@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/CieDigitalLabs/instaSlide/issues"
   },
-  "homepage": "https://github.com/CieDigitalLabs/instaSlide#readme"
+  "homepage": "https://github.com/CieDigitalLabs/instaSlide#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "run-sequence": "^1.2.1"
+  }
 }
