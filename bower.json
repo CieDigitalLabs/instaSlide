@@ -1,0 +1,23 @@
+{
+  "name": "instaslide",
+  "description": "Create a slide instantly from any section of your website",
+  "main": "src/js/jquery.instaslide.js",
+  "authors": [
+    "Fernando Herrera"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "slider",
+    "gallery",
+    "modal"
+  ],
+  "homepage": "https://github.com/CieDigitalLabs/instaSlide",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

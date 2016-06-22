@@ -2,7 +2,7 @@
   "name": "instaslide",
   "version": "1.0.0",
   "description": "Create a slide instantly from any section of your website",
-  "main": "jquery.instaslide.js",
+  "main": "src/js/jquery.instaslide.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
