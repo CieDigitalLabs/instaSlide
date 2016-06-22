@@ -90,6 +90,7 @@
              */
             _add: function (content) {
                 $('body').append(content);
+                $(document).foundation('reveal', 'reflow');
             },
             /* Render media
              * @param {object} media - Images and video
@@ -211,7 +212,10 @@
                     // Timeout needed for foundation modal to display
                     setTimeout(function () {
                         // Recalculate slider width
-                        var carousel = $("#" + settings.wrapperAttrs.id + " .owl-carousel").data('owlCarousel');
+                        var carousel = $("#" + settings.wrapperAttrs.id + " .owl-carousel").data('owl.carousel');
+                        if (carousel == null) {
+                            carousel = $("#" + settings.wrapperAttrs.id + " .owl-carousel").data('owlCarousel'); // Support older versions of Owl < 2.1
+                        }
                         carousel._width = $("#" + settings.wrapperAttrs.id + " .owl-carousel").width();
                         carousel.invalidate('width');
                         carousel.refresh();
@@ -310,11 +314,13 @@
         var mediaCounter;
         settings.media.images.length != 'undefined' ? mediaCounter = settings.media.images.length : 0;
         $that.find("img, iframe").each(function () {
-            var $this = $(this);
+            var $this = $(this),
+								srcVal = $this.attr("srcset") ? $this.attr("srcset") : $this.attr("src");
+
             if (isVideo($this)) {
-                settings.media.video.push(new Video($this[0], $this.attr("src")).convert());
+                settings.media.video.push(new Video($this[0], srcVal).convert());
             } else {
-                settings.media.images.push(new Picture($this[0], $this.attr("srcset"), $this.attr("alt")).strip().wrapCheck(mediaCounter).onClick());
+                settings.media.images.push(new Picture($this[0], srcVal, $this.attr("alt")).strip().wrapCheck(mediaCounter).onClick());
                 mediaCounter++;
             }
 

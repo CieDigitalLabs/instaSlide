@@ -19,5 +19,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "foundation": "^5.5.3",
+    "owl.carousel": "^2.1.6"
+  }
 }
