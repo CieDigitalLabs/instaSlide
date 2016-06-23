@@ -12,7 +12,7 @@
                 class: "instaSlide-content"
             },
             sliderAttrs: {
-                class: "instaSlide-slider owl-carousel carousel"
+                class: "instaSlide-slider owl-carousel"
             },
             wrapperAttrs: {
                 id: "image-slider-",
