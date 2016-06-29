@@ -1,24 +1,30 @@
 (function ($) {
     /* Instaslide plugin
-     * @param {object} options - extends plugin
+     * @param {object} options - extends plugin     *
      */
     $.fn.instaSlide = function (options) {
         var defaults = {
+            // Provide additional images or video to instaslide. Images are added to the begining of the slide, videos at the end.
             media: {
-                images: [],
-                video: []
+                images: [], // [{src: "pathtoimage/image.src", alt: "alt text"}]
+                video: [] // [{src: "https://www.youtube.com/watch?v=1iAYhQsQhSY", alt: "alt text"}]
             },
+            // Pass attributes to the content container
             contentAttrs: {
-                class: "instaSlide-content"
+                class: "instaslide-content"
             },
+            // Pass attributes to the slider container
             sliderAttrs: {
-                class: "instaSlide-slider owl-carousel"
+                class: "instaslide-slider owl-carousel"
             },
+            // Pass attributes to the wrapper
             wrapperAttrs: {
                 id: "image-slider-",
-                class: "reveal-modal instaSlide-modal"
+                class: "reveal-modal instaslide-modal"
             },
+            // Pass in css property names with value to use inline css on wrapper
             wrapperCSS: {},
+            // Initialize Owl Carousel
             owlOptions: {
                 items: 1,
                 autoHeight: true,
@@ -26,9 +32,11 @@
                 nav: true,
                 video: true
             },
+            // Callback fires when slider is visible
             onSliderShow: function () { }
         };
 
+        // Override default settings with passed through options
         var settings = $.extend(true, {}, defaults, options),
             $that = $(this),
             slider;
